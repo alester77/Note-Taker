@@ -1,11 +1,18 @@
 const express = require('express');  
-const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 3000;
-const notesData = require('./db/db.json');
+const apiRoutes = require('./routes/apiRoutes');
+const htmlRoutes = require('./routes/htmlRoutes');
 
+//parse URL and JSON
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
-app.get('/api/notes', (req, res) => res.json(notesData));
+//host public folder
+app.use(express.static('public'));
+
+app.use("/api", apiRoutes);
+app.use("/", htmlRoutes);
 
 app.listen(PORT, () => {
     console.log(`App listening on PORT: ${PORT}`);
