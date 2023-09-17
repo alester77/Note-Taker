@@ -18,6 +18,8 @@ When starting the application in VS Code npm i will need to be ran to install th
 
 To use, click get the button "Get started." It will take you to the note taker html page. Here you can add a note title and note text. You can click the save icon and the notes will be displayed on the left. If you'd like to delete the note, you can do this my clicking the trashcan button. 
 
+Deployed Site: https://powerful-taiga-94068-2d37a7f3ff35.herokuapp.com/
+
 ![screenshot of note taker site](./public/assets/images/screenshot.png)
 
 ## Credits
